@@ -56,3 +56,5 @@ views.py
   - add_comment_to_post: A view function that allows users to add comments to a specific post.
   - comment_approve: A view function that approves a comment.
   - comment_remove: A view function that removes a comment.
+
+Each view or view function handles a specific HTTP request and performs appropriate actions, such as rendering templates, creating, updating, or deleting objects, and redirecting users to other pages. The login_required decorator is used to restrict access to certain views or view functions to logged-in users only.
