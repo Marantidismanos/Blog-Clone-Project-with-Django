@@ -1,6 +1,11 @@
 #This is a Project with Django Framework v5.0.6 using Bootstrap v5.3
 
 The Project is a Blog Clone.
+----------------------------
+
+models.py
+---------
+
 - Post Model:
   - It represents a blog post and contains fields such as author, title, text, created_date, and published_date.
   - author is a ForeignKey field linking to the built-in Django User model, representing the author of the post.
@@ -22,3 +27,32 @@ The Project is a Blog Clone.
   - The __str__ method returns the content of the comment.
 
 Additionally, both models import necessary modules from Django, such as models, timezone, and reverse. The reverse function is used to generate URLs for views.
+
+views.py
+---------
+
+- Import Statements:
+  - Import necessary modules from Django such as render, get_object_or_404, redirect, etc.
+  - Import models (Post and Comment) from the blog.models module.
+  - Import forms (PostForm and CommentForm) from the blog.forms module.
+  - Import other necessary modules like timezone, reverse_lazy, etc.
+
+- Class-Based Views:
+  - AboutView: A simple template view that renders the 'about.html' template.
+  - PostListView: A ListView that displays a list of published posts ordered by their published dates.
+  - PostDetailView: A DetailView that displays the details of a specific post.
+  - CreatePostView: A CreateView that allows logged-in users to create new posts.
+  - UpdatePostView: An UpdateView that allows logged-in users to update existing posts.
+  - DeletePostView: A DeleteView that allows logged-in users to delete existing posts.
+
+- LoginRequiredMixin:
+  - Used as a mixin class with views that require the user to be logged in.
+
+- DraftListView:
+  - A ListView that displays a list of draft posts (posts with null published dates) ordered by their creation dates. Requires the user to be logged in.
+
+- Function-Based Views:
+  - post_publish: A view function that publishes a draft post.
+  - add_comment_to_post: A view function that allows users to add comments to a specific post.
+  - comment_approve: A view function that approves a comment.
+  - comment_remove: A view function that removes a comment.
