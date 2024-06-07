@@ -1,4 +1,4 @@
-~> This is a Project with Django Framework v5.0.6 using Bootstrap v5.3 <~
+--> This is a Project with Django Framework v5.0.6 using Bootstrap v5.3 <--
 
 The Project is a Blog Clone.
 ----------------------------
